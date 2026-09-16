@@ -114,7 +114,7 @@ export function prioritizeTasks(lines: string[]): PrioritizedTask[] {
 
     let priority: Priority = "medium";
     if (high.length > 0) priority = "high";
-    else if (low.length > 0 && medium.length === 0) priority = "low";
+    else if (low.length > 0) priority = "low";
     else if (medium.length > 0) priority = "medium";
     else priority = index < 2 ? "medium" : "low";
 
